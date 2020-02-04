@@ -18,7 +18,7 @@ int main()
                         }
                     }
                     printf("\nGCD of %d and %d is %d", m, n, gcd) ;
-		 break ;
+		    break ;
 		 }
         case 2 : {  if (n>m)
 	                {   r = m ;
@@ -34,7 +34,7 @@ int main()
 	                    n = r ;
 	                }
 	                printf("\nGCD is %d",n) ;
-		  break ;
+		  	break ;
                  }
         case 3 : {   while (m!=n)
                     {   if (m>n)
@@ -45,7 +45,7 @@ int main()
                         }
                     }
                     printf("\nGCD is %d",m) ;
-		  break;
+		    break;
                  }
         case 4 : {   if (m>n)
                     {   s = n ;
@@ -62,7 +62,7 @@ int main()
                         }
                     }
                     printf("\nGCD is %d",s) ;
-		  break ;
+		    break ;
                  }
         default :{ printf("Invalid option");
                  }
