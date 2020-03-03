@@ -23,6 +23,23 @@ void printMaxmtgs(int s[], int f[], int n)
     } 
 } 
 
+void insertsort(int arr[], int arr2[], int n) 
+{	int i, key, j; 
+	for (i = 1; i < n; i++) 
+	{	key = arr[i]; 
+		j = i - 1; 
+		while (j >= 0 && arr[j] > key) 
+		{	arr[j + 1] = arr[j];
+			arr2[j] = arr2[j] + arr2[j+1] ;
+			arr2[j+1] = arr2[j] - arr2[j+1] ;
+			arr2[j] = arr2[j] - arr2[j+1] ;
+			j = j - 1; 
+		} 
+		arr[j + 1] = key; 
+	} 
+} 
+
+
 int main() 
 { 
     int s[10] , f[10] ; 
@@ -30,11 +47,10 @@ int main()
 	{	s[i] = rand()%20;
 		f[i] = rand()%20;
 	}
-    int n = sizeof(s)/sizeof(s[0]); 
+    int n = sizeof(s)/sizeof(s[0]);
+	insertsort(f, s, n); 
     printMaxmtgs(s, f, n); 
     return 0; 
 } 
-
-
 
 
