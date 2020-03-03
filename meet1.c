@@ -39,6 +39,14 @@ void insertsort(int arr[], int arr2[], int n)
 	} 
 } 
 
+void print(int arr[],int arr2[], int n) 
+{	int i; 
+	for (i = 0; i < n; i++) 
+	{ printf("{%d,%d} ", arr2[i], arr[i]);
+	} 
+	printf("\n"); 
+} 
+
 
 int main() 
 { 
@@ -49,8 +57,7 @@ int main()
 	}
     int n = sizeof(s)/sizeof(s[0]);
 	insertsort(f, s, n); 
+	print(f,s,n);
     printMaxmtgs(s, f, n); 
     return 0; 
 } 
-
-
